@@ -13,13 +13,14 @@
 body{
     margin: auto;
     display: table;
+    background: #aeaeae;
 }
 .nft-profile {
   position: relative;
   display: inline-block;
   width: 374px;
   margin: 20px;
-  color: #232323;
+  color: #2b2a2a7c;
   transition: 0.3s;
 }
 .nft-profile:hover .nft-profile--content {
