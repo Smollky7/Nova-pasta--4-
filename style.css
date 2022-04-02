@@ -42,7 +42,7 @@ body{
   box-sizing: border-box;
   overflow: hidden;
   transition: 0.3s;
-  background: #fff;
+  background: #4b4b4b7c;
   outline: 1px solid #ddd;
 }
 .nft-profile .nft-profile--content img {
