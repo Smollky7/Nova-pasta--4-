@@ -1,0 +1,501 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=PlayfairDisplay);
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body{
+    margin: auto;
+    display: table;
+}
+.nft-profile {
+  position: relative;
+  display: inline-block;
+  width: 374px;
+  margin: 20px;
+  color: #232323;
+  transition: 0.3s;
+}
+.nft-profile:hover .nft-profile--content {
+  cursor: pointer;
+  transform: scale(1.01);
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
+}
+.nft-profile .nft-profile--header {
+  padding: 0;
+}
+.nft-profile .nft-profile--content {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  color: #fff;
+  background: #fff;
+  border: 10px solid #fff;
+  border-radius: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: 0.3s;
+  background: #fff;
+  outline: 1px solid #ddd;
+}
+.nft-profile .nft-profile--content img {
+  width: 100%;
+  height: 45%;
+  object-fit: cover;
+}
+.nft-profile .nft-profile--content .nft-user {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  margin: -91px 0 0 -91px;
+}
+.nft-profile .nft-profile--content .nft-user img {
+  width: 150px;
+  height: 150px;
+  border: 16px solid #fff;
+  margin: 0;
+}
+.nft-profile .nft-profile--content .nft-info {
+  margin-top: 100px;
+  text-align: center;
+}
+.nft-profile .nft-profile--content .nft-info h3 {
+  font-family: Roboto;
+  color: #232323;
+  font-wight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.nft-profile .nft-profile--content .nft-info h3 span {
+  display: block;
+  font-size: 16px;
+  text-transform: none;
+  opacity: 50%;
+  margin-top: 5px;
+}
+.nft-profile .nft-profile--content .nft-action {
+  text-align: center;
+}
+
+.nft-user {
+  min-width: 200px;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: left;
+}
+.nft-user span {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.5;
+  opacity: 45%;
+}
+.nft-user img {
+  float: left;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  border-radius: 100%;
+  border: 2px solid #fff;
+  object-fit: cover;
+}
+
+.nft-time {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: left;
+}
+.nft-time span {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.5;
+  opacity: 45%;
+}
+
+.nft-price,
+.nft-balance {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: right;
+}
+.nft-price span,
+.nft-balance span {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.5;
+  opacity: 45%;
+}
+.nft-price i,
+.nft-balance i {
+  font-weight: normal;
+}
+
+.nft-audiotrack {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  z-index: 10;
+  height: 50px;
+  width: 62%;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.35);
+  overflow: hidden;
+}
+.nft-audiotrack img {
+  min-height: 500px;
+  min-width: 374px;
+  object-fit: cover;
+  -webkit-filter: blur(15px);
+  /* Safari 6.0 - 9.0 */
+  filter: blur(15px);
+  opacity: 75%;
+}
+
+.btn {
+  position: relative;
+  height: 50px;
+  padding: 7px 30px;
+  margin: 5px;
+  color: #232323;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  transition: 0.3s;
+}
+.btn.btn--primary {
+  color: #fff;
+  background: linear-gradient(45deg, #e7007c, #BF0093);
+  box-shadow: 0 4px 20px rgba(231, 0, 124, 0.35);
+}
+.btn.btn--primary:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100px;
+  height: 50px;
+  background: #000;
+}
+.btn.btn--primary:hover {
+  cursor: pointer;
+  transform: scale(0.99);
+  box-shadow: 0 0px 0px rgba(231, 0, 124, 0.35);
+}
+.btn.btn--secondary {
+  color: #e7007c;
+  background: none;
+  border: 1px solid #e7007c;
+}
+.btn.btn--icon {
+  padding: 7px 22px;
+  color: #232323;
+  background: #f4f4f4;
+}
+
+p {
+  font-size: 16px;
+  font-family: Roboto;
+  line-height: 21px;
+  color: #757575;
+}
+
+.badge {
+  padding: 4px 10px;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-size: 12px;
+  color: #232323;
+  background: #fff;
+  border-radius: 3px;
+}
+a,
+a:hover {
+    text-decoration: none;
+}
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+.wrapper {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    padding: 50px 20px;
+    padding-top: 100px;
+    display: flex;
+}
+.profile-card {
+    width: 100%;
+    min-height: 460px;
+    margin: auto;
+    box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
+    background: #CFD8DC;
+    border-radius: 12px;
+    max-width: 700px;
+    position: relative;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(50, 50, 50, 50, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.profile-card.active .profile-card__cnt {
+    filter: blur(6px);
+}
+
+.profile-card.active .profile-card-message,
+.profile-card.active .profile-card__overlay {
+    opacity: 1;
+    pointer-events: auto;
+    transition-delay: .1s;
+}
+
+.profile-card.active .profile-card-form {
+    transform: none;
+    transition-delay: .1s;
+}
+
+.profile-card__img {
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    z-index: 4;
+    box-shadow: 0px 5px 50px 0px #6c44fc, 0px 0px 0px 7px rgba(107, 74, 255, 0.5);
+}
+
+.profile-card__img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-card__cnt {
+    margin-top: -65px;
+    text-align: center;
+    padding: 0 20px;
+    padding-bottom: 40px;
+    transition: all .3s;
+}
+
+.profile-card__name {
+    font-weight: 700;
+    font-size: 15px;
+    color: #6944ff;
+    margin-bottom: 15px;
+}
+
+.profile-card__name span {
+    border-bottom: 2px solid #6944ff;
+}
+
+.profile-card__txt {
+    font-size: 18px;
+    font-weight: 500;
+    color: #324e63;
+    margin-bottom: 15px;
+}
+
+.profile-card__txt strong {
+    font-weight: 700;
+}
+
+.profile-card-loc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.profile-card-loc__icon {
+    display: inline-flex;
+    font-size: 27px;
+    margin-right: 10px;
+}
+
+.profile-card-inf {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 35px;
+}
+
+.profile-card-inf__item {
+    padding: 10px 35px;
+    min-width: 150px;
+}
+
+.profile-card-inf__title {
+    font-weight: 700;
+    font-size: 27px;
+    color: #324e63;
+}
+
+.profile-card-inf__txt {
+    font-weight: 500;
+    margin-top: 7px;
+}
+
+.profile-card-social {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.profile-card-social__item {
+    display: inline-flex;
+    width: 55px;
+    height: 55px;
+    margin: 15px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: #405de6;
+    box-shadow: 0px 7px 30px rgba(43, 98, 169, 0.5);
+    position: relative;
+    font-size: 21px;
+    flex-shrink: 0;
+    transition: all .3s;
+}
+
+.profile-card-social__item.facebook {
+    background: linear-gradient(45deg, #3b5998, #0078d7);
+    box-shadow: 0px 4px 30px rgba(0, 110, 255, 0.5);
+}
+
+.profile-card-social__item.twitter {
+    background: linear-gradient(45deg, #1da1f2, #0e71c8);
+    box-shadow: 0px 4px 30px rgba(0, 145, 255, 0.7);
+}
+
+.profile-card-social__item.instagram {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    box-shadow: 0px 4px 30px rgba(114, 1, 253, 0.6);
+}
+
+.profile-card-social__item.gogoole {
+    background: linear-gradient(45deg, #c20f0f, #fc1414);
+    box-shadow: 0px 4px 30px rgba(255, 0, 0, 0.6);
+}
+
+.profile-card-social__item.github {
+    background: linear-gradient(45deg, #72777a, #414447);
+    box-shadow: 0px 4px 30px rgba(50, 51, 51, 0.6);
+}
+
+.profile-card-social__item.spotify {
+    background: linear-gradient(45deg, #3eff17, #106122);
+    box-shadow: 0px 4px 30px rgba(81, 255, 0, 0.6);
+}
+
+.profile-card-social__item.reddit {
+    background: linear-gradient(45deg, #d5135a, #f05924);
+    box-shadow: 0px 4px 30px rgba(255, 0, 34, 0.6);
+}
+
+.profile-card-social .icon-font {
+    display: inline-flex;
+}
+
+.profile-card-ctr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.profile-card__button {
+    background: none;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    margin: 15px 35px;
+    padding: 15px 40px;
+    min-width: 201px;
+    border-radius: 50px;
+    min-height: 55px;
+    color: #fff;
+    cursor: pointer;
+    backface-visibility: hidden;
+    transition: all .3s;
+}
+
+.profile-card__button:focus {
+    outline: none !important;
+}
+
+.profile-card__button:first-child {
+    margin-left: 0;
+}
+
+.profile-card__button:last-child {
+    margin-right: 0;
+}
+
+.profile-card__button.button--blue {
+    background: linear-gradient(45deg, #1da1f2, #0e71c8);
+    box-shadow: 0px 4px 30px rgba(19, 127, 212, 0.4);
+}
+
+.profile-card__button.button--blue:hover {
+    box-shadow: 0px 7px 30px rgba(19, 127, 212, 0.75);
+}
+
+.profile-card__button.button--orange {
+    background: linear-gradient(45deg, #d5135a, #f05924);
+    box-shadow: 0px 4px 30px rgba(223, 45, 70, 0.35);
+}
+
+.profile-card__button.button--orange:hover {
+    box-shadow: 0px 7px 30px rgba(223, 45, 70, 0.75);
+}
+
+.projects {
+    margin: auto;
+    margin-top: 35px;
+    width: 350px;
+    border-radius: 15px;
+}
+.projects_letter {
+    color: #324E63;
+}
