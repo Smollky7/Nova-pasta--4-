@@ -24,7 +24,7 @@ margin: auto;
 
 body{
     margin: auto;
-    display: table;
+    display: flex;
     background: #212534;
     align-items: center;
     flex-direction: column;
