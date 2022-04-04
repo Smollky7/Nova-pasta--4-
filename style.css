@@ -27,7 +27,6 @@ body{
     display: flex;
     background: #212534;
     align-items: center;
-    flex-direction: column;
     box-sizing: border-box;
   
 }
