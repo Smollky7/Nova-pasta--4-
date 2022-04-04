@@ -34,7 +34,7 @@ body{
   position: relative;
   display: inline-block;
   width: 374px;
-  margin: 20px;
+  margin: auto;
   color: #4b4b4b7c;
   transition: 0.3s;
 }
