@@ -10,10 +10,19 @@
   }
 }
 
+
 body{
     margin: auto;
     display: table;
-    background: #aeaeae;
+    min-height: 100vh;
+    background: #212534;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+  
 }
 .nft-profile {
   position: relative;
@@ -59,7 +68,7 @@ body{
 .nft-profile .nft-profile--content .nft-user img {
   width: 150px;
   height: 150px;
-  border: 16px solid #fff;
+  border: 16px solid #4b4b4b7c;
   margin: 0;
 }
 .nft-profile .nft-profile--content .nft-info {
@@ -491,12 +500,82 @@ a:hover {
     box-shadow: 0px 7px 30px rgba(223, 45, 70, 0.75);
 }
 
-.projects {
-    margin: auto;
-    margin-top: 35px;
-    width: 350px;
-    border-radius: 15px;
+
+@property --rotate{
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
 }
-.projects_letter {
-    color: #324E63;
+:root {
+  --card-height: 450px;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+.nft-profile--content  {
+  background: #191c29;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 1.5em;
+  color: rgb(88 199 250 / 0%);
+  cursor: pointer;
+  font-family: cursive;
+}
+
+.nft-profile--content::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.nft-profile::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+a {
+  color: #212534;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 2rem;
 }
