@@ -153,13 +153,16 @@ a {
   color: #fff;
   font-size: 20px;
   text-transform: uppercase;
+  
 }
-.nft-profile .nft-profile--content .nft-info h3 span {
+.nft-profile .nft-profile--content .nft-info h3 span .link{
   display: block;
   font-size: 16px;
   text-transform: none;
   opacity: 50%;
   margin-top: 5px;
+  text-decoration: none;
+  color: white;
 }
 .nft-profile .nft-profile--content .nft-action {
   text-align: center;
