@@ -37,12 +37,14 @@ body{
   margin: auto;
   color: #4b4b4b7c;
   transition: 0.3s;
+  
 }
 
 .nft-profile .nft-profile--header {
   padding: 0;
 }
 .nft-profile .nft-profile--content {
+  margin-top: 50%;
   position: relative;
   width: 100%;
   height: 500px;
